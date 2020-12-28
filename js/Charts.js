@@ -1,7 +1,9 @@
 const path = require('path');
 const { BrowserWindow } = require('electron');
 
-class MainWindow {
+let chartsRouter = express.Router();
+
+class Charts {
   constructor() {
     let htmlPath = 'file://' + path.join(__dirname, '..') + '../pages/charts.html'
 
@@ -19,4 +21,4 @@ class MainWindow {
   }
 }
 
-module.exports = Charts;
+module.exports = chartsRouter;

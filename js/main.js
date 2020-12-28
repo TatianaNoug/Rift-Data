@@ -3,6 +3,10 @@ const path = require('path')
 const url = require('url')
 
 let mainWindow
+let charts = require('./charts');
+let role = require('./role');
+
+
 function createWindow () {
   // Create the browser window.
   mainWindow = new BrowserWindow({width: 800, height: 600, frame:false})
@@ -43,3 +47,6 @@ app.on('activate', function () {
 })
 // In this file you can include the rest of your app's specific main process
 // code. You can also put them in separate files and require them here.
+
+app.use('/v1/charts', charts);
+app.use('/v1/role',role);
