@@ -50,5 +50,9 @@ app.on('activate', function () {
 // In this file you can include the rest of your app's specific main process
 // code. You can also put them in separate files and require them here.
 
+function closeWin() {
+  this.window.close();
+}
+
 ex.use('/v1/charts', charts);
 ex.use('/v1/roles',roles);

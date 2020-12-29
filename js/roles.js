@@ -4,6 +4,7 @@ const { BrowserWindow } = require('electron');
 
 let rolesRouter = express.Router();
 
+
 class Roles {
   constructor() {
     let htmlPath = 'file://' + path.join(__dirname, '..') + '../pages/roles.html'
@@ -19,7 +20,18 @@ class Roles {
     })
 
     this.window.loadURL(htmlPath);
+
+    this.window.on('closed', function () {
+        // Dereference the window object, usually you would store windows
+        // in an array if your app supports multi windows, this is the time
+        // when you should delete the corresponding element.
+        this.window = null
+    })
   }
 }
+
+function closeWin() {
+    this.window.close();
+ }
 
 module.exports = rolesRouter;
