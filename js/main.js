@@ -6,7 +6,7 @@ const ex = express();
 
 let mainWindow
 let charts = require('./charts');
-//let role = require('./role');
+let roles = require('./roles');
 
 
 function createWindow () {
@@ -51,4 +51,4 @@ app.on('activate', function () {
 // code. You can also put them in separate files and require them here.
 
 ex.use('/v1/charts', charts);
-//express.use('/v1/role',role);
+ex.use('/v1/roles',roles);
