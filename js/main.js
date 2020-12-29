@@ -8,6 +8,19 @@ let mainWindow
 let charts = require('./charts');
 let roles = require('./roles');
 
+var MongoClient = require('mongodb').MongoClient
+  , assert = require('assert');
+
+// Connection URL
+var url2 = 'mongodb://localhost:27017/Rift-DataLocal';
+// Use connect method to connect to the Server
+MongoClient.connect(url2, function(err, db) {
+  assert.strictEqual(null, err);
+  console.log("Connected correctly to server WXSDRCTFVGYBHNJ??JINHUBGYVFTCDXRDCFTVGYBHUNIJ?");
+
+  db.close();
+});
+
 
 function createWindow () {
   // Create the browser window.
