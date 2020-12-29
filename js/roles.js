@@ -5,6 +5,7 @@ const {MongoClient} = require('mongodb');
 const  assert = require('assert')
 let rolesRouter = express.Router();
 
+<<<<<<< HEAD
 //var MongoClient = require('mongodb').MongoClient
   //, assert = require('assert');
 
@@ -19,6 +20,8 @@ let rolesRouter = express.Router();
   //});
   //db.close();
 //});
+=======
+>>>>>>> ce644f3488bc95980d385aaacd38125766dabf8e
 
 class Roles {
   constructor() {
@@ -35,6 +38,13 @@ class Roles {
     })
 
     this.window.loadURL(htmlPath);
+
+    this.window.on('closed', function () {
+        // Dereference the window object, usually you would store windows
+        // in an array if your app supports multi windows, this is the time
+        // when you should delete the corresponding element.
+        this.window = null
+    })
   }
 }
 
@@ -44,7 +54,6 @@ async function main(){
    * See https://docs.mongodb.com/ecosystem/drivers/node/ for more details
    */
   const uri = "mongodb://localhost:27017/Rift-DataLocal";
-
 
   const client = new MongoClient(uri);
 
@@ -70,4 +79,8 @@ async function listDatabases(client){
 };
 
 main().catch(console.error);
+function closeWin() {
+    this.window.close();
+ }
+
 module.exports = rolesRouter;

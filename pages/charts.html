@@ -26,11 +26,20 @@ li a:hover {
 .active {
   background-color: #dcdfe1;
 }
+.dot {
+  background-color: #f44336; 
+  margin-left: 4px;
+  height: 10px;
+  width: 10px;
+  border-radius: 50%;
+  display: inline-block;
+}
 </style>
 <div class="window">
     <header class="toolbar toolbar-header">
-        <h1 class="title">Rift Data App</h1>
-      </header>
+      <span onclick="closeWin();" class="dot"></span>
+      <h1 class="title">Rift Data App</h1>
+    </header>
     <div class="window-content">
       <div class="pane-group">
         <div class="pane-sm sidebar">

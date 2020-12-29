@@ -27,4 +27,8 @@ class MainWindow {
   }
 }
 
+function closeWin() {
+  this.window.close();
+}
+
 module.exports = MainWindow;
