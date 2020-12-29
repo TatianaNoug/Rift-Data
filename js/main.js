@@ -3,11 +3,14 @@ const { app, Menu, BrowserWindow } = require('electron')
 const path = require('path')
 const url = require('url')
 const ex = express();
+const {MongoClient} = require('mongodb');
+const  assert = require('assert')
 
 let mainWindow
 let charts = require('./charts');
 let roles = require('./roles');
 
+/*
 var MongoClient = require('mongodb').MongoClient
   , assert = require('assert');
 
@@ -16,10 +19,10 @@ var url2 = 'mongodb://localhost:27017/Rift-DataLocal';
 // Use connect method to connect to the Server
 MongoClient.connect(url2, function(err, db) {
   assert.strictEqual(null, err);
-  console.log("Connected correctly to server WXSDRCTFVGYBHNJ??JINHUBGYVFTCDXRDCFTVGYBHUNIJ?");
-
+ // console.log("Connected correctly to server WXSDRCTFVGYBHNJ??JINHUBGYVFTCDXRDCFTVGYBHUNIJ?");
   db.close();
 });
+*/
 
 
 function createWindow () {
@@ -62,6 +65,37 @@ app.on('activate', function () {
 })
 // In this file you can include the rest of your app's specific main process
 // code. You can also put them in separate files and require them here.
+
+async function main(){
+  
+  const uri = "mongodb://localhost:27017/Rift-DataLocal";
+
+  const client = new MongoClient(uri);
+
+  try {
+      // Connect to the MongoDB cluster
+      await client.connect();
+
+      // Make the appropriate DB calls
+      await  listDatabases(client);
+
+  } catch (e) {
+      console.error(e);
+  } finally {
+      await client.close();
+  }
+}
+
+async function listDatabases(client){
+  databasesList = await client.db().admin().listDatabases();
+
+  console.log("Databases:");
+  databasesList.databases.forEach(db => console.log(` - ${db.name}`));
+};
+
+main().catch(console.error);
+
+
 
 function closeWin() {
   this.window.close();

@@ -3,9 +3,9 @@ const path = require('path');
 const { BrowserWindow } = require('electron');
 const {MongoClient} = require('mongodb');
 const  assert = require('assert')
+
 let rolesRouter = express.Router();
 
-<<<<<<< HEAD
 //var MongoClient = require('mongodb').MongoClient
   //, assert = require('assert');
 
@@ -20,8 +20,6 @@ let rolesRouter = express.Router();
   //});
   //db.close();
 //});
-=======
->>>>>>> ce644f3488bc95980d385aaacd38125766dabf8e
 
 class Roles {
   constructor() {
@@ -48,37 +46,6 @@ class Roles {
   }
 }
 
-async function main(){
-  /**
-   * Connection URI. Update <username>, <password>, and <your-cluster-url> to reflect your cluster.
-   * See https://docs.mongodb.com/ecosystem/drivers/node/ for more details
-   */
-  const uri = "mongodb://localhost:27017/Rift-DataLocal";
-
-  const client = new MongoClient(uri);
-
-  try {
-      // Connect to the MongoDB cluster
-      await client.connect();
-
-      // Make the appropriate DB calls
-      await  listDatabases(client);
-
-  } catch (e) {
-      console.error(e);
-  } finally {
-      await client.close();
-  }
-}
-
-async function listDatabases(client){
-  databasesList = await client.db().admin().listDatabases();
-
-  console.log("Databases:");
-  databasesList.databases.forEach(db => console.log(` - ${db.name}`));
-};
-
-main().catch(console.error);
 function closeWin() {
     this.window.close();
  }
