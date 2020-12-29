@@ -1,10 +1,12 @@
+const express = require('express');
 const { app, Menu, BrowserWindow } = require('electron')
 const path = require('path')
 const url = require('url')
+const ex = express();
 
 let mainWindow
 let charts = require('./charts');
-let role = require('./role');
+let roles = require('./roles');
 
 
 function createWindow () {
@@ -48,5 +50,5 @@ app.on('activate', function () {
 // In this file you can include the rest of your app's specific main process
 // code. You can also put them in separate files and require them here.
 
-app.use('/v1/charts', charts);
-app.use('/v1/role',role);
+ex.use('/v1/charts', charts);
+ex.use('/v1/roles',roles);

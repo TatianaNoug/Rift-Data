@@ -2,11 +2,11 @@ const express = require('express');
 const path = require('path');
 const { BrowserWindow } = require('electron');
 
-let chartsRouter = express.Router();
+let rolesRouter = express.Router();
 
-class Charts {
+class Roles {
   constructor() {
-    let htmlPath = 'file://' + path.join(__dirname, '..') + '../pages/charts.html'
+    let htmlPath = 'file://' + path.join(__dirname, '..') + '../pages/roles.html'
 
     this.window = new BrowserWindow({
       show: false,
@@ -22,4 +22,4 @@ class Charts {
   }
 }
 
-module.exports = chartsRouter;
+module.exports = rolesRouter;
