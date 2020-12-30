@@ -14,6 +14,7 @@ class MainWindow {
       minWidth: 800,
       minHeight: 600,
       backgroundColor: '#E4ECEF',
+      nodeIntegration: true,
     })
 
     this.window.loadURL(htmlPath);

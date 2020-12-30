@@ -6,7 +6,6 @@ const ex = express();
 const {MongoClient} = require('mongodb');
 const  assert = require('assert');
 
-
 class Champion{
 
     constructor(_name, _lane, _winrate){
@@ -16,6 +15,7 @@ class Champion{
     }
 
 }
+
 module.exports = {Champion};
 //    constructor(){
 

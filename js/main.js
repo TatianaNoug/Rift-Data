@@ -3,11 +3,17 @@ const { app, Menu, BrowserWindow, Main } = require('electron')
 const path = require('path')
 const url = require('url')
 const ex = express();
+var globalV = require('../assets/global.js');
 
+
+//let charts = require('./charts');
+let roles = require('./roles');
 
 function createWindow () {
   // Create the browser window.
-  mainWindow = new BrowserWindow({width: 800, height: 600, frame:false})
+  mainWindow = new BrowserWindow({width: 800, height: 600, frame:false, webPreferences: {
+    nodeIntegration: true
+  }})
   // and load the index.html of the app.
   mainWindow.loadURL(url.format({
     pathname: path.join(__dirname, '../pages/index.html'),
@@ -49,3 +55,6 @@ function closeWin() {
   this.window.close();
 }
 
+
+//ex.use('/v1/charts', charts);
+ex.use('/v1/roles',roles);

@@ -16,6 +16,9 @@ class Charts {
       minWidth: 800,
       minHeight: 600,
       backgroundColor: '#E4ECEF',
+      webPreferences: {
+        nodeIntegration: true
+      }
     })
 
     this.window.loadURL(htmlPath);

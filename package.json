@@ -26,7 +26,8 @@
     "electron-squirrel-startup": "^1.0.0",
     "express": "^4.17.1",
     "mongodb": "^3.6.3",
-    "photonkit": "^0.1.2"
+    "photonkit": "^0.1.2",
+    "require": "^2.4.20"
   },
   "config": {
     "forge": {
