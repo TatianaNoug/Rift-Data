@@ -29,6 +29,7 @@ class Charts {
   }
 }
 
+
 function closeWin() {
   this.window.close();
 }

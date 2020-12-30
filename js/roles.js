@@ -1,25 +1,10 @@
 const express = require('express');
 const path = require('path');
-const { BrowserWindow } = require('electron');
+const { BrowserWindow, TouchBarSlider } = require('electron');
 const {MongoClient} = require('mongodb');
-const  assert = require('assert')
+const ex = express();
+const globalV = require('../assets/global.js');
 
-let rolesRouter = express.Router();
-
-//var MongoClient = require('mongodb').MongoClient
-  //, assert = require('assert');
-
-// Connection URL
-//var urlMongo = 'mongodb://localhost:27017/Rift-DataLocal';
-// Use connect method to connect to the Server
-//MongoClient.connect(urlMongo, function(err, db) {
-  //assert.strictEqual(null, err);
-  //console.log("Connected correctly to server ");
-  //const findResult = await Big.find({
-    //participants.championId: "Vi",
-  //});
-  //db.close();
-//});
 
 class Roles {
   constructor() {
@@ -46,8 +31,12 @@ class Roles {
   }
 }
 
-function closeWin() {
-    this.window.close();
- }
 
-module.exports = rolesRouter;
+function calculateTop(){
+  console.log(globalV.listOfChampions.length);
+}
+
+
+function closeWin() {
+  this.window.close();
+}
