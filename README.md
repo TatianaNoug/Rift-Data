@@ -22,10 +22,11 @@ We also give you through a docker container the acces to the db so you can creat
 
 ### Install librairies
 
-- Write : "npx @electron-forge/cli import " this will allow you to forge the app
+- Open a cmd/shell
 - Install npm using one of the following method :
   . With homebrew "brew install npm" (only for mac or linux)
   . By downloading [Node.js](https://nodejs.org/en/download/)
+ - Write : "npx @electron-forge/cli import " this will allow you to forge the app
 
 ### Forge App
 To forge the app and be able to use it follow those steps :
