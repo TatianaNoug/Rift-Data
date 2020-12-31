@@ -4,7 +4,7 @@ We are building this project for our latest year in engineering studies at ECE P
 
 ## Technologies used
   
-To build this application we wanted to rely on NodeJS with the Electron Framework. That grant us the possibility to have a desktop app that will be easy to deploy.
+To build this application we wanted to rely on NodeJS with the Electron Framework. That grants us the possibility to have a desktop app that will be easy to deploy.
 As DBMS we choosed to use MongoDB as our data are going to be semi structured and as we want to do real-time data for the future.
 Finally for the ML part, we will use Spark to do the machine learning for our app.
   
@@ -15,9 +15,9 @@ Finally for the ML part, we will use Spark to do the machine learning for our ap
 In this version you can find the demo version of the app, this demo is connected to a mongoDB Atlas cluster that only has 10% of our dataset.
 The app is composed of 3 sections, Home, Charts and Roles.
 In the Home section you will find informations about the app and it's usage.
-As far as we are today, we implemented the Roles section. In this section, you can choose a role (Top, Jungle, Midlane, Adc or support) and the application will give you the best champion based on his winrate on 11k games.
+We implemented the Roles section. In this section, you can choose a role (Top, Jungle, Midlane, Adc or support) and the application will give you the best champion based on his winrate on 11k games.
 We also implemented the charts section, which display some charts about our statistics.
-We downloaded the mongodb-spark-connector but we didn't have the time to implement machine learning algorithms in this project.
+We downloaded the mongodb-spark-connector but we didn't have the time to implement machine learning algorithms in this project for now.
 We also give you through a docker container the acces to the db so you can create your own queries.
 
 If you want to test the app, don't worry the queries are a bit long when you want to query for a role.
@@ -26,22 +26,22 @@ If you want to test the app, don't worry the queries are a bit long when you wan
 
 ### Install librairies
 
+- Download the Zip of the code or clone the repository
+- Open the zip
 - Open a cmd/shell
 - Install npm using one of the following method :
   . With homebrew "brew install npm" (only for mac or linux)
   . By downloading [Node.js](https://nodejs.org/en/download/)
- - Write : "npm install node"
+ - Write : "npm install node" then "npm install express"
  - Write : "npx @electron-forge/cli import " this will allow you to forge the app
 
 ### Forge App
 To forge the app and be able to use it follow those steps :
-- Download the Zip of the code or clone the repository
-- Open the zip
-- Open a shell in the folder
+- In the project folder previously opened, open a cmd/shell
 - Write : "npm run make"
 - The executable of the app will be ../out/rift-data-electron-darwin-x64/rift-data-electron.app
 
-You will now be able to run the app just by double-clicking in the executable.
+You will now be able to run the app just by double-clicking on the executable.
 
 ## Docker
 If you want to make specific queries, we grant you the acces to read our demo database.
@@ -81,6 +81,6 @@ We asked Riot to obtains an API so we can request specific APIs but we don't hav
 ## Difficulties faced
 Through this project we face many difficulties.
 The first one was to create a request that can return a winrate for a specific champion. As the document was composed of arrays of arrays we spent a little time on it.
-That was the first desktop app that we built and it was quite a chellenge, we lost many hours trying things and understanding how it works.
+That was the first desktop app that we built and it was quite a challenge, we lost many hours trying things and understanding how it works.
 Same for docker, we spent some hours to finally understand that we can't use Docker for a GUI app (That's pretty obvious but we didn't saw it at first). 
-Finally, we ran out of time. We wanted to do a lot of things in this project, and we didn't know that we will face difficulties for litteraly every step. I think we underestimated the amount of work for this project so we are here with an unfinished project but we learnt a lot by facing those problems.
+Finally, we ran out of time. We wanted to do a lot of things on this project, and we underestimated the difficulties we were going to face for litteraly every step. I think we also underestimated the amount of work for this project so we are here with an unfinished project but we learnt a lot by facing those problems.
