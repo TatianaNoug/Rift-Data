@@ -48,9 +48,6 @@ class Roles {
     this.window.loadURL(htmlPath);
 
     this.window.on('closed', function () {
-        // Dereference the window object, usually you would store windows
-        // in an array if your app supports multi windows, this is the time
-        // when you should delete the corresponding element.
         this.window = null
     })
   }
@@ -86,22 +83,18 @@ function printInfo(){
 
 function calculateOne(champ){
 
-  //let Champion = require('../assets/champion.js');
   var MongoClient = require('mongodb').MongoClient;
   const uri = "mongodb+srv://DockerUser:Rift-Data1@cluster0.zoomo.mongodb.net/Rift-Data?retryWrites=true&w=majority";
   const client = new MongoClient(uri, { useNewUrlParser: true });
   client.connect(err => {
     const dbo = client.db("Rift-Data").collection("DS 2");
     const globalV = require('../assets/global.js');
-     // var total = 0;
-      //console.log(total);
       dbo.aggregate([{$match: {"participants" : {$elemMatch: {championId: champ, "timeline.lane": this.lane,"stats.win":false, "timeline.role": this.role }}}},{$count: "total"}])
       .toArray().then( t =>{
         if(t.length>0){
           this.total = t[0].total;
         }else this.total = 0;
     });
-      //console.log(total);
       var win;
       dbo.aggregate([{$match: {"participants" : {$elemMatch: {championId: champ, "stats.win":true, "timeline.lane": this.lane, "timeline.role": this.role }}}},{$count: "total"}])
       .toArray().then( w =>{
@@ -126,75 +119,19 @@ function calculateOne(champ){
         if(listTriee.length>=146){
          this.printInfo();
         }
-       
-
-        
-
         
       });
-
-     
     
       
-      
     client.close();
-    //if(number == 1) return this.listTriee[0];
-    //else if (number == 2) return this.listTriee[1];
-    //else return this.listTriee[2];
     return;
   }); 
 }
-
-/*
-function tri(){
-  console.log(listTriee);
-  tempList = listTriee;
-  listTriee = [];
-  listTriee.push(tempList[0]);
-  for(var i=1; i<tempList.length; i++){
-    if(listTriee[i-1].winrate > tempList[i].winrate){
-      listTriee.push(tempList[i]);
-    }else{
-      temp = listTriee;
-      listTriee = [tempList[i]];
-      listTriee.push(temp);
-    }
-  }
-  console.log(listTriee);
-}
-*/
-/*
-async function calculate(k){
-  const globalV = require('../assets/global.js');
-  if(k= 1 ){
-      this.lane = "TOP";
-      this.role = "SOLO"
-    }else{
-      this.lane = "mid";
-    }
-
-  //var dbo = client.db("Rift-DataLocal");
-  /*client.db().admin().listDatabases().then(function(dbList){
-    console.log(dbList);
-    //callback(dbList);
-  })*/
-  //await globalV.listOfChampions.forEach(calculateOne);
-
-  //document.getElementById("demo").innerHTML = getHighestCacheMan();
-    
-  //return[listTriee[0], listTriee[1], listTriee[2]];
-
-    
-  
-//};
-
-//main().catch(console.error);
 
 
 
 function calculateTop(k){
    calculate(k);
-  //console.log(globalV.listOfChampions);
 }
 
 async function calculate(k){
