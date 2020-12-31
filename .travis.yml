@@ -1,0 +1,10 @@
+language: node_js
+node_js:
+- '14.15.3'
+script:
+- echo 'Installing'
+- npm install express
+- npm install electron --save -dev
+- npm install mongo
+- echo 'Starting'
+- npm start
