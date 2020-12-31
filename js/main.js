@@ -16,10 +16,14 @@ function createWindow () {
     protocol: 'file:',
     slashes: true
   }))
+  // Open the DevTools.
+  //mainWindow.webContents.openDevTools()
   mainWindow.on('closed', function () {
     mainWindow = null
   })
 }
+
+
 app.on('ready', createWindow)
 app.on('window-all-closed', function () {
   if (process.platform !== 'darwin') {

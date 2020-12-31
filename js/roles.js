@@ -18,10 +18,11 @@ var number = 0;
 
 class Champion{
 
-  constructor(_name, _lane, _winrate){
+  constructor(_name, _lane, _winrate, _games){
       this.name = _name;
       this.lane = _lane;
       this.winrate= _winrate;
+      this.games = _games;
   }
 
 }
@@ -56,28 +57,28 @@ class Roles {
 
 function printInfo(){
   document.getElementById("champ1Name").innerHTML = this.listTriee[0].name;
-  document.getElementById("champ1Lane").innerHTML = this.listTriee[0].lane;
   document.getElementById("champ1Winrate").innerHTML = this.listTriee[0].winrate;
+  document.getElementById("champ1Total").innerHTML = this.listTriee[0].games;
   
   document.getElementById("champ2Name").innerHTML = this.listTriee[1].name;
-  document.getElementById("champ2Lane").innerHTML = this.listTriee[1].lane;
   document.getElementById("champ2Winrate").innerHTML = this.listTriee[1].winrate;
+  document.getElementById("champ2Total").innerHTML = this.listTriee[1].games;
   
   document.getElementById("champ3Name").innerHTML = this.listTriee[2].name;
-  document.getElementById("champ3Lane").innerHTML = this.listTriee[2].lane;
   document.getElementById("champ3Winrate").innerHTML = this.listTriee[2].winrate;
+  document.getElementById("champ3Total").innerHTML = this.listTriee[2].games;
   
   document.getElementById("champ1WName").innerHTML = this.listTriee[this.listTriee.length-1].name;
-  document.getElementById("champ1WLane").innerHTML = this.listTriee[this.listTriee.length-1].lane;
   document.getElementById("champ1WWinrate").innerHTML = this.listTriee[this.listTriee.length-1].winrate;
+  document.getElementById("champ1WTotal").innerHTML = this.listTriee[this.listTriee.length -1].games;
 
   document.getElementById("champ2WName").innerHTML = this.listTriee[this.listTriee.length -2].name;
-  document.getElementById("champ2WLane").innerHTML = this.listTriee[this.listTriee.length -2].lane;
   document.getElementById("champ2WWinrate").innerHTML = this.listTriee[this.listTriee.length -2].winrate;
+  document.getElementById("champ2WTotal").innerHTML = this.listTriee[this.listTriee.length -2].games;
   
   document.getElementById("champ3WName").innerHTML = this.listTriee[this.listTriee.length -3].name;
-  document.getElementById("champ3WLane").innerHTML = this.listTriee[this.listTriee.length -3].lane;
   document.getElementById("champ3WWinrate").innerHTML = this.listTriee[this.listTriee.length -3].winrate;
+  document.getElementById("champ3WTotal").innerHTML = this.listTriee[this.listTriee.length -3].games;
 }
 
 
@@ -112,11 +113,10 @@ function calculateOne(champ){
           if(typeof(temp) != "undefined"){
             this.listTriee.push(temp);
             this.listTriee.sort(function(a,b){return b.winrate-a.winrate});
-            console.log(this.listTriee);
           }
         
 
-        if(listTriee.length>=146){
+        if(listTriee.length>=144){
          this.printInfo();
         }
         
