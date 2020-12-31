@@ -11,7 +11,7 @@ let roles = require('./roles');
 
 function createWindow () {
   // Create the browser window.
-  mainWindow = new BrowserWindow({width: 800, height: 600, frame:false, webPreferences: {
+  mainWindow = new BrowserWindow({width: 800, height: 600, frame:false,movable: true, webPreferences: {
     nodeIntegration: true
   }})
   // and load the index.html of the app.
