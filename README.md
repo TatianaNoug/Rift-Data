@@ -14,6 +14,7 @@ Finally for the ML part, we will use Spark to do the machine learning for our ap
 
 In this version you can find the demo version of the app, this demo is connected to a mongoDB Atlas cluster that only has 10% of our dataset.
 The app is composed of 3 sections, Home, Charts and Roles.
+In the Home section you will find informations about the app and it's usage.
 As far as we are today, we implemented the Roles section. In this section, you can choose a role (Top, Jungle, Midlane, Adc or support) and the application will give you the best champion based on his winrate on 11k games.
 We also implemented the charts section, which display some charts about our statistics.
 We downloaded the mongodb-spark-connector but we didn't have the time to implement machine learning algorithms in this project.
