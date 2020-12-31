@@ -63,16 +63,17 @@ li a:hover {
         <div class="pane">
           
           <div class='content'> 
-            <h5>By Roles Champions Ranking</h5>
+            <h1>By Roles Champions Ranking</h1>
 
             <div class='choice'>
-            <button onclick="calculateTop(1);" class="btn btn-large btn-default">TopLane</button>
-            <button class="btn btn-large btn-primary">Jungle</button>
-            <button class="btn btn-large btn-positive">MidLane</button>
-            <button class="btn btn-large btn-negative">ADC</button>
-            <button class="btn btn-large btn-warning">Support</button>
+            <button onclick="calculate(1);" class="btn btn-large btn-default">TopLane</button>
+            <button onclick="calculate(2);" class="btn btn-large btn-primary">Jungle</button>
+            <button onclick="calculate(3);" class="btn btn-large btn-positive">MidLane</button>
+            <button onclick="calculate(4);" class="btn btn-large btn-negative">ADC</button>
+            <button onclick="calculate(5);" class="btn btn-large btn-warning">Support</button>
           </div></div>
 
+          <h5>3 Best Champions</h5>
           <table class="table-striped">
             <thead>
               <tr>
@@ -83,22 +84,52 @@ li a:hover {
             </thead>
             <tbody>
               <tr>
-                <td>champ1</td>
-                <td>?</td>
-                <td>80%</td>
+                <td><div id= "champ1Name"></div></td>
+                <td><div id= "champ1Lane"></div></td>
+                <td><div id= "champ1Winrate">%</div></td>
               </tr>
               <tr>
-                <td>champ2</td>
-                <td>?</td>
-                <td>80%</td>
+                <td><div id= "champ2Name"></div></td>
+                <td><div id= "champ2Lane"></div></td>
+                <td><div id= "champ2Winrate">%</div></td>
               </tr>
               <tr>
-                <td>champ3</td>
-                <td>?</td>
-                <td>80%</td>
+                <td><div id= "champ3Name"></div></td>
+                <td><div id= "champ3Lane"></div></td>
+                <td><div id= "champ3Winrate">%</div></td>
               </tr>
             </tbody>
           </table>
+
+
+          <h5>3 Worst Champions</h5>
+          <table class="table-striped">
+            <thead>
+              <tr>
+                <th>Name</th>
+                <th>Kind</th>
+                <th>WinRate</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><div id= "champ1WName"></div></td>
+                <td><div id= "champ1WLane"></div></td>
+                <td><div id= "champ1WWinrate">%</div></td>
+              </tr>
+              <tr>
+                <td><div id= "champ2WName"></div></td>
+                <td><div id= "champ2WLane"></div></td>
+                <td><div id= "champ2WWinrate">%</div></td>
+              </tr>
+              <tr>
+                <td><div id= "champ3WName"></div></td>
+                <td><div id= "champ3WLane"></div></td>
+                <td><div id= "champ3WWinrate">%</div></td>
+              </tr>
+            </tbody>
+          </table>
+         
          
         </div>
       </div>
