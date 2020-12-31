@@ -3,14 +3,7 @@
 <style>
   ul {
   list-style-type: none;
-  padding: 2px 10px 2px 25px;
-  display: block;
-  color: #333;
-  text-decoration: none;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
+  }
 li a{
   padding: 2px 10px 2px 25px;
   display: block;
@@ -40,6 +33,7 @@ li a:hover {
       <span onclick="closeWin();" class="dot"></span>
       <h1 class="title">Rift Data App</h1>
     </header>
+    
     <div class="window-content">
       <div class="pane-group">
         <div class="pane-sm sidebar">
@@ -52,13 +46,17 @@ li a:hover {
               </ul>
             </nav>
           </div>
-        <div class="pane"></div>
-        <iframe style="background: #FFFFFF;border: none;border-radius: 2px;box-shadow: 0 2px 10px 0 rgba(70, 76, 79, .2);" width="640" height="480" src="https://charts.mongodb.com/charts-instagram-like-tcqqt/embed/charts?id=6669b5c6-1629-4b06-8871-87da1380bd60&theme=light"></iframe>
-        <iframe style="background: #FFFFFF;border: none;border-radius: 2px;box-shadow: 0 2px 10px 0 rgba(70, 76, 79, .2);" width="640" height="480" src="https://charts.mongodb.com/charts-instagram-like-tcqqt/embed/charts?id=c66e080f-154a-457a-a611-50b7fcfcf50f&theme=light"></iframe>
-  
-        <script src="../js/charts.js"></script>
+          
+          <div class="pane">
+          <h1>Charts for analysis</h1>
+
+          <iframe style="background: #FFFFFF;border: none;border-radius: 2px;box-shadow: 0 2px 10px 0 rgba(70, 76, 79, .2);" width="640" height="480" src="https://charts.mongodb.com/charts-instagram-like-tcqqt/embed/charts?id=6669b5c6-1629-4b06-8871-87da1380bd60&theme=light"></iframe>
+          <iframe style="background: #FFFFFF;border: none;border-radius: 2px;box-shadow: 0 2px 10px 0 rgba(70, 76, 79, .2);" width="640" height="480" src="https://charts.mongodb.com/charts-instagram-like-tcqqt/embed/charts?id=c66e080f-154a-457a-a611-50b7fcfcf50f&theme=light"></iframe>
+          <iframe style="background: #FFFFFF;border: none;border-radius: 2px;box-shadow: 0 2px 10px 0 rgba(70, 76, 79, .2);" width="640" height="480" src="https://charts.mongodb.com/charts-instagram-like-tcqqt/embed/charts?id=2201ae9d-f927-4792-af06-bbef10c61fa6&theme=light"></iframe>
         </div>
       </div>
     </div>
   </div>
   
+
+  <script src="../js/Charts.js"></script>
