@@ -1,17 +1,19 @@
 const express = require('express');
-const { app, Menu, BrowserWindow } = require('electron')
+const { app, Menu, BrowserWindow, Main } = require('electron')
 const path = require('path')
 const url = require('url')
 const ex = express();
+var globalV = require('../assets/global.js');
 
-let mainWindow
-let charts = require('./charts');
+
+//let charts = require('./charts');
 let roles = require('./roles');
-
 
 function createWindow () {
   // Create the browser window.
-  mainWindow = new BrowserWindow({width: 800, height: 600, frame:false})
+  mainWindow = new BrowserWindow({width: 800, height: 600, frame:false,movable: true, webPreferences: {
+    nodeIntegration: true
+  }})
   // and load the index.html of the app.
   mainWindow.loadURL(url.format({
     pathname: path.join(__dirname, '../pages/index.html'),
@@ -19,7 +21,7 @@ function createWindow () {
     slashes: true
   }))
   // Open the DevTools.
-   //mainWindow.webContents.openDevTools()
+   mainWindow.webContents.openDevTools()
   // Emitted when the window is closed.
   mainWindow.on('closed', function () {
     // Dereference the window object, usually you would store windows
@@ -47,12 +49,12 @@ app.on('activate', function () {
     createWindow()
   }
 })
-// In this file you can include the rest of your app's specific main process
-// code. You can also put them in separate files and require them here.
+
 
 function closeWin() {
   this.window.close();
 }
 
-ex.use('/v1/charts', charts);
+
+//ex.use('/v1/charts', charts);
 ex.use('/v1/roles',roles);
