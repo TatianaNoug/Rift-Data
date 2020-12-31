@@ -19,6 +19,8 @@ We also implemented the charts section, which display some charts about our stat
 We downloaded the mongodb-spark-connector but we didn't have the time to implement machine learning algorithms in this project.
 We also give you through a docker container the acces to the db so you can create your own queries.
 
+If you want to test the app, don't worry the queries are a bit long when you want to query for a role.
+
 ## Installation
 
 ### Install librairies
