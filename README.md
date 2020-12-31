@@ -36,6 +36,8 @@ To forge the app and be able to use it follow those steps :
 - Write : "npm run make"
 - The executable of the app will be ../out/rift-data-electron-darwin-x64/rift-data-electron.app
 
+You will now be able to run the app just by double-clicking in the executable.
+
 ## Docker
 If you want to make specific queries, we grant you the acces to read our demo database.
 You can use the official mongo image available on DockerHub [here](https://hub.docker.com/_/mongo)
