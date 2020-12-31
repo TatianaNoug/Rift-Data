@@ -74,9 +74,6 @@ Today, we have a desktop app. This demo desktop app is easy to deploy. It's cros
 As the app is a desktop app and use a GUI, we can't deploy it using Docker, but we wanted to include Docker in this project so you will be able to query the demo part of our database using Docker.
 
 ## The Future
-
-We want to implement the charts section. In this section, you will find a integration of MongoBD charts to see graphics about the statistics of a specific role, or champion.
-
 We also want to implement machine learning using spark.
 
 We asked Riot to obtains an API so we can request specific APIs but we don't have any response now but we we will get one we will use 3 specific API calls to add more data in our database. We will crawl the data from at least all challenger matches.
@@ -86,5 +83,4 @@ Through this project we face many difficulties.
 The first one was to create a request that can return a winrate for a specific champion. As the document was composed of arrays of arrays we spent a little time on it.
 That was the first desktop app that we built and it was quite a chellenge, we lost many hours trying things and understanding how it works.
 Same for docker, we spent some hours to finally understand that we can't use Docker for a GUI app (That's pretty obvious but we didn't saw it at first). 
-We wanted to integrate a CI/CD pipeline but it's kinda weird to implement with a Desktop app.
 Finally, we ran out of time. We wanted to do a lot of things in this project, and we didn't know that we will face difficulties for litteraly every step. I think we underestimated the amount of work for this project so we are here with an unfinished project but we learnt a lot by facing those problems.
