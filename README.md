@@ -18,6 +18,23 @@ As far as we are today, we implemented the Roles section. In this section, you c
 We downloaded the mongodb-spark-connector but we didn't have the time to implement machine learning algorithms in this project.
 We also give you through a docker container the acces to the db so you can create your own queries.
 
+## Installation
+
+# Install librairies
+
+- Write : "npx @electron-forge/cli import " this will allow you to forge the app
+- Install npm using one of the following method :
+  . With homebrew "brew install npm" (only for mac or linux)
+  . By downloading ![alt text](https://nodejs.org/en/download/ "Node.js")
+
+# Forge App
+To forge the app and be able to use it follow those steps :
+- Download the Zip of the code or clone the repository
+- Open the zip
+- Open a shell in the folder
+- Write : "npm run make"
+- The executable of the app will be ../out/rift-data-electron-darwin-x64/rift-data-electron.app
+
 ## Docker
 If you want to make specific queries, we grant you the acces to read our demo database.
 You can use the official mongo image available on DockerHub [here](https://hub.docker.com/_/mongo)
