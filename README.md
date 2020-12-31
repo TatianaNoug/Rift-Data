@@ -4,9 +4,9 @@ We are building this project for our latest year in engineering studies at ECE P
 
 ## Technologies used
   
-  To build this application we wanted to rely on NodeJS with the Electron Framework. That grant us the possibility to have a desktop app that will be easy to deploy.
-  As DBMS we choosed to use MongoDB as our data are going to be semi structured and as we want to do real-time data for the future.
-  Finally for the ML part, we will use Spark to do the machine learning for our app.
+To build this application we wanted to rely on NodeJS with the Electron Framework. That grant us the possibility to have a desktop app that will be easy to deploy.
+As DBMS we choosed to use MongoDB as our data are going to be semi structured and as we want to do real-time data for the future.
+Finally for the ML part, we will use Spark to do the machine learning for our app.
   
 
   
@@ -35,6 +35,13 @@ This user can only read the db.
 
 ## Spark
 We did not have the time to implement machine learning with spark but we took care of the configuration. We used a DataBricks cluster that we linked with our MongoDB Atlas cluster using a mongodb-spark-connector.
+![alt text](https://github.com/TatianaNoug/Rift-Data/blob/master/Images/DataBricks%20cluster.png "DataBricks Cluster")
+
+We use the mongoDB spark connector : org.mongodb.spark:mongo-spark-connector_2.12:3.0.0. We found it in Maven.
+![alt text](https://github.com/TatianaNoug/Rift-Data/blob/master/Images/Mongo%20Connector.png "Mongo Connector")
+
+
+![alt text](https://github.com/TatianaNoug/Rift-Data/blob/master/Images/Notebook%20-%20load().png "Notebook - load()")
 
 
 ## The pros
