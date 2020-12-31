@@ -1,7 +1,7 @@
 {
   "name": "rift-data-electron",
   "version": "1.0.0",
-  "author": "",
+  "author": "Tatiana Meister & Lucas Lopez",
   "description": "Rift Data Electron App",
   "main": "js/main.js",
   "scripts": {
