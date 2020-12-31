@@ -15,6 +15,7 @@ Finally for the ML part, we will use Spark to do the machine learning for our ap
 In this version you can find the demo version of the app, this demo is connected to a mongoDB Atlas cluster that only has 10% of our dataset.
 The app is composed of 3 sections, Home, Charts and Roles.
 As far as we are today, we implemented the Roles section. In this section, you can choose a role (Top, Jungle, Midlane, Adc or support) and the application will give you the best champion based on his winrate on 11k games.
+We also implemented the charts section, which display some charts about our statistics.
 We downloaded the mongodb-spark-connector but we didn't have the time to implement machine learning algorithms in this project.
 We also give you through a docker container the acces to the db so you can create your own queries.
 
@@ -62,15 +63,11 @@ We use the mongoDB spark connector : org.mongodb.spark:mongo-spark-connector_2.1
 ![alt text](https://github.com/TatianaNoug/Rift-Data/blob/master/Images/Mongo%20Connector.png "Mongo Connector")
 
 
-![alt text](https://github.com/TatianaNoug/Rift-Data/blob/master/Images/Notebook%20-%20load().png "Notebook - load()")
-
-
 ## The pros
 
 Today, we have a desktop app. This demo desktop app is easy to deploy. It's cross-platform and easy to use.
 
 ## The cons
-
 As the app is a desktop app and use a GUI, we can't deploy it using Docker, but we wanted to include Docker in this project so you will be able to query the demo part of our database using Docker.
 
 ## The Future
